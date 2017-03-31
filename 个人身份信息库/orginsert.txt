@@ -1,0 +1,8 @@
+insert into innerrg(rgcode, rgname)values(21, '个人身份信息库管理');
+
+insert into innerright(inrightcode, inrightname, stopflag)values('21001', '发起身份信息整理任务', 0);
+insert into innerright(inrightcode, inrightname, stopflag)values('21002', '查看身份信息整理统计结果', 0);
+insert into innerright(inrightcode, inrightname, stopflag)values('21003', '在线更新身份信息调度', 0);
+
+
+

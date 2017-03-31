@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://10.1.4.77:7014/creditunion/feedbackdownload.jsp -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=gb2312"><LINK 
+href="demo.files/style.htm" type=text/css rel=stylesheet>
+<style type="text/css">
+<!--
+
+#Layer1{
+	position: absolute;left: 0;top:0; height: 100%; width: 100%; background: #333;
+	z-index:1;filter: alpha(Opacity=30) ;opacity: 0.2;display: none;
+}
+#Layer2 {
+	position:absolute;
+	background-color:#FFFFFF;
+	left:120px;
+	top:60px;
+	width:400px;
+	height:170px;
+	z-index:2;display: none;
+}
+-->
+</style>
+<script src="js/tabclass.js"></script>
+<link href="image/tab.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+var tabbox1=new TabBox("tab");
+tabbox1.addtab("p1","加载队列报文",0);
+tabbox1.addtab("p2","非加载队列报文");
+</script>
+
+
+<META content="MSHTML 6.00.2900.2995" name=GENERATOR>
+<link href="0_css.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+a:visited {
+	color: #333333;
+}
+a:active {
+	color: #333333;
+}
+-->
+</style></HEAD>
+<BODY text=#000000 bgColor=#ffffff leftMargin=0 background=demo.files/bac_2.jpg 
+topMargin=0>
+<div id="Layer1"></div>
+<div id="Layer2">
+  <table width="100%" height="100%" cellspacing="0">
+    <tr>
+      <td class="outline"><table width="100%" class=text cellSpacing=0 borderColorDark=#ffffff borderColorLight=#6c88ae>
+        <tr>
+          <td colspan="2"><table width="100%" height="22" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="22" background="0_image/menu_l.gif">&nbsp;</td>
+              <td width="183" background="0_image/menu_b.gif"><div align="center"><span class="t12"><strong>人员标识整合/拆分信息查询</strong></span></div></td>
+              <td background="0_image/menu_m.gif">&nbsp;</td>
+              </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td width="121" height="30"><div align="right" class="t12 t12">报文文件名称</div></td>
+          <td width="312"><div align="left">
+              <input type="text" name="named">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">报送方式</div></td>
+          <td><div align="left">
+              <select name="select3" style="width:133px">
+              </select>
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">数据类型</div></td>
+          <td><div align="left">
+              <select name="select" style="width:133px">
+              </select>
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">报文处理状态</div></td>
+          <td><div align="left">
+              <select name="select2" style="width:133px">
+              </select>
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">调度状态</div></td>
+          <td><div align="left">
+              <select name="select4" style="width:133px">
+              </select>
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">报文生成日期</div></td>
+          <td><div align="left">
+              <input type="text" name="date1" readonly="readonly" size="10" class="textarea_simple"/>
+              <input name="button2" type="button" class="outline" onClick="popUpCalendar(this, date1, 'yyyy-mm-dd')" value="选择">
+            -
+            <input type="text" name="date2" readonly="readonly" size="10" class="textarea_simple"/>
+            <input name="button22" type="button" class="outline" onClick="popUpCalendar(this, date2, 'yyyy-mm-dd')" value="选择">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">数据接收时间</div></td>
+          <td><div align="left">
+              <input type="text" name="date3" readonly="readonly" size="10" class="textarea_simple"/>
+              <input name="button23" type="button" class="outline" onClick="popUpCalendar(this, date3, 'yyyy-mm-dd')" value="选择">
+            -
+            <input type="text" name="date4" readonly="readonly" size="10" class="textarea_simple"/>
+            <input name="button25" type="button" class="outline" onClick="popUpCalendar(this, date4, 'yyyy-mm-dd')" value="选择">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">报文加载时间</div></td>
+          <td><div align="left">
+              <input type="text" name="date5" readonly="readonly" size="10" class="textarea_simple"/>
+              <input name="button24" type="button" class="outline" onClick="popUpCalendar(this, date5, 'yyyy-mm-dd')" value="选择">
+            -
+            <input type="text" name="date6" readonly="readonly" size="10" class="textarea_simple"/>
+            <input name="button26" type="button" class="outline" onClick="popUpCalendar(this, date6, 'yyyy-mm-dd')" value="选择">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">上报用户代码</div></td>
+          <td><div align="left">
+              <input type="text" name="named3">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">报文内部编号</div></td>
+          <td><div align="left">
+              <input type="text" name="named4">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30"><div align="right" class="t12 t12">数据格式版本号</div></td>
+          <td><div align="left">
+              <input type="text" name="named5">
+          </div></td>
+        </tr>
+        <tr>
+          <td height="30" colspan="2"><div align="center">
+            <input name="Submit2" type="submit" class="outline" value="查  询" style="height:24px" onClick="document.getElementsByName('Layer1')[0].style.display='none';document.getElementsByName('Layer2')[0].style.display='none';">
+            <input name="Submit22" type="submit" class="outline" value="返  回" style="height:24px" onClick="document.getElementsByName('Layer1')[0].style.display='none';document.getElementsByName('Layer2')[0].style.display='none';">
+          </div></td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+</div>
+<table width="100%" height="100%" border="2" cellspacing="2" bgcolor="#FFFFFF">
+  <tr>
+  
+    <td valign="top">
+	<br>
+    质量检查报表管理<br>
+    <br>
+	  <a href="dataQualityStatManager.htm" target="mainFrame">&nbsp;&nbsp;&nbsp;数据质量统计表管理</a><br>
+      <br>
+      <a href="oneSplitTwoListingManage.htm" target="mainFrame">&nbsp;&nbsp;&nbsp;疑似重复展示清单管理</a><br>
+    <br>
+    <a href="operationListingManage.htm" target="mainFrame">&nbsp;&nbsp;&nbsp;业务清单管理</a><br>
+    </td>
+  </tr>
+</table>
+</BODY></HTML>

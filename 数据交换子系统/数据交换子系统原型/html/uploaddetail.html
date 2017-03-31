@@ -1,0 +1,221 @@
+<%@ page language="java" import="java.util.*,com.icfcc.dissent.obj.*,com.icfcc.dissent.dto.*,com.icfcc.dissent.constant.*,com.icfcc.dissent.service.*" pageEncoding="GBK"%>
+
+<%
+    TreeMap certHash = null;
+    DissentApplyDTO applydto = new DissentApplyDTO();
+    Vector vc = new Vector();
+    String reqno = "";
+    
+    if(request.getAttribute(Constant.DISSENT_APPLY_DTO) != null){
+        applydto = (DissentApplyDTO)request.getAttribute(Constant.DISSENT_APPLY_DTO);
+    }
+    if(request.getAttribute(Constant.DISSENT_ITEM_DTOS) != null){
+        vc = (Vector)request.getAttribute(Constant.DISSENT_ITEM_DTOS);
+    }
+    reqno = applydto.getYyno();
+    if(request.getAttribute(Constant.QUERY_CERT_TYPE_LIST) != null){
+        certHash = (TreeMap)request.getAttribute(Constant.QUERY_CERT_TYPE_LIST);
+    }
+    String certypename = "";
+    Iterator io = certHash.keySet().iterator();
+    while (io.hasNext()){
+	String tmpKey = (String)io.next();
+	String tmpStr = (String)certHash.get(tmpKey);
+        if (applydto.getAgenttype().equals(tmpKey)) {
+            certypename = tmpStr;
+        }
+    }
+%>
+
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<STYLE type=text/css>BODY {
+	MARGIN-TOP: 0px; BACKGROUND-IMAGE: url(images/seach_4.gif); MARGIN-LEFT: 0px
+}
+</STYLE>
+<LINK href="common.css" type=text/css 
+rel=stylesheet>
+<STYLE type=text/css>.style1 {
+	COLOR: #ffffff
+}
+</STYLE>
+</HEAD>
+<BODY>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+   <TR><TD class="blue" height=30>
+      <DIV align=left>
+      	<IMG height=11 src="images/location_arrow.gif" width=8 align=absMiddle> 
+      	您的位置：特定信息交换&gt;&gt; <STRONG>已上传文件查询</STRONG></DIV>
+  </TD></TR>
+   <TR>
+          <TD colspan="2" class="white"  background="images/bg.gif" height="22">已上传文件信息</TD>
+  </TR>
+  <form name="form1" method="post">
+  <TR><TD vAlign=top>     
+     <TABLE cellSpacing=1 cellPadding=0 width="100%" bgcolor="#81b3c8">
+        <TR bgcolor="#EAF2FB">
+        	<TD width=100 noWrap>序号</TD>
+        	<TD width=80%>B10411000H000120090315005</TD>
+       </TR>
+        <TR bgcolor="#EAF2FB">
+        	<TD width=100>文件名</TD>
+        	<TD width=80%>0000000000000020090315XX001.txt</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>文件大小(m)</TD>
+        	<TD>500</TD>
+       </TR>
+      <TR bgcolor="#EAF2FB">
+        	<TD>文件生成时间</TD>
+        	<TD>20090315</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>上传时间</TD>
+        	<TD>20090316</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>文件路径</TD>
+        	<TD>/data/exchange/upload/数据质量/special/00000000000000/0000000000000020090315XX001.txt</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>上传用户名</TD>
+        	<TD>adminuser</TD>
+       </TR>
+        
+       <TR bgcolor="#EAF2FB">
+        	<TD>数据属性  
+           </TD>
+        	<TD><div id="sx1" style="display:" >数据质量 
+            <input type="button" value="修改"  onClick="update()"></div>
+             <div id="sx2" style="display:none">
+            
+            <select name="certtype">
+        	      <option selected value=1>数据质量</option>
+           	    <option  value=2>系统应用</option>
+                <option  value=3>其他</option>
+             	</select>  <input type="button" value="保存" onClick="save()">
+            </div>
+           
+            
+            </TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>备份状态</TD>
+        	<TD>未备份</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>备份时间</TD>
+        	<TD>&nbsp;</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD width=100>下载次数</TD>
+        	<TD width=80%>2</TD>
+       </TR>
+     
+       </TR>
+       </TABLE>
+       </td>
+	   </tr>
+       
+         <tr><td>&nbsp;</td></tr>
+         <TR>
+          <TD colspan="2" class="white"  background="images/bg.gif" height="22">下载信息</TD>  
+  </TR>
+  <tr>
+     <td>
+       <TABLE cellSpacing=1 cellPadding=0 width="100%"  bgcolor="#81b3c8" >
+       <tr bgcolor="#81b3c8">
+       <td>下载机构名称</td><td>机构代码</td><td>下载用户名</td><td>下载时间</td><td>下载状态</td><td></td>
+       
+       </tr>
+       <tr bgcolor="#EAF2FB">
+       <td height="14">中国建设银</td>
+       <td>B10411000H0001</td>
+       <td>jsyh</td>
+       <td>20090321</td>
+       <td><div id="abcd">已下载</div><div id="efgh" style="display:none">未下载</div></td>
+       <td>
+       <input type="submit" name="button" id="button" value="激活" onClick="javascript:def(this)">
+        <input type="submit" name="button" id="button" value="删除" onClick="javascript:del(this)">
+       </td>
+       </tr>
+       
+          <tr bgcolor="#EAF2FB">
+       <td height="14">中国人民银行总行</td>
+       <td>E3200011011101</td>
+       <td>rmyh</td>
+       <td>20090320</td>
+       <td><div id="abcd1">已下载</div><div id="efgh1" style="display:none">未下载</div></td>
+       <td>
+       <input type="submit" name="button" id="button" value="激活" onClick="javascript:def1(this)">
+        <input type="submit" name="button" id="button" value="删除" onClick="javascript:def(this)">
+       </td>
+       </tr>
+       
+          <tr bgcolor="#EAF2FB">
+       <td height="14">中国人民银行北京营业部</td>
+       <td>E320111102S001</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>未下载</td>
+       <td>
+       <input type="submit" name="button" id="button" value="激活" disabled>
+        <input type="submit" name="button" id="button" value="删除" onClick="javascript:def(this)">
+       </td>
+       </tr>
+       
+       </table>
+       
+       <TABLE width="100%">
+       <TR><TD align=center>
+        <INPUT class=input-button onClick="javascript:window.open('orgselect.html', 'newwindow', 'height=600, width=600, top=50, left=50, toolbar=no, menubar=no, scrollbars=no, resizable=no,location=n o, status=no')" type=button value="增加" name=Submit2 > 
+        <INPUT class=input-button onClick="javascript:del1()" type=button value="删除已上传文件" name=Submit2> 
+          
+          <INPUT class=input-button onClick="javascript:history.go(-1);" type=button value="返回" name=Submit2> 
+          
+       </TD></TR>
+     </TABLE>
+     </form>
+     </TD></TR>
+</TABLE>
+</FORM>
+
+</BODY>
+</HTML>
+<script>
+function def(button)
+{
+   button.disabled=true;
+  document.getElementById("abcd").style.display="none";
+   document.getElementById("efgh").style.display="";
+}
+
+function def1(button)
+{
+   button.disabled=true;
+  document.getElementById("abcd1").style.display="none";
+   document.getElementById("efgh1").style.display="";
+}
+function del()
+{
+   window.confirm("是否删除该接收机构？");
+}
+function del1()
+{
+   window.confirm("是否删除已上传文件？");
+   history.go(-1);
+}
+function update()
+{
+     document.getElementById("sx1").style.display="none";
+   document.getElementById("sx2").style.display="";
+}
+function save()
+{
+     document.getElementById("sx2").style.display="none";
+   document.getElementById("sx1").style.display="";
+}
+</script>

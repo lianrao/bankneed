@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+/*body
+{
+	margin: 0;
+}
+
+td
+{
+	font-family: ;
+	font-size: 12px;
+	color: #000000;
+}*/
+
+.bd
+{
+	FILTER: progid:DXImageTransform.Microsoft.Shadow(direction=135,color=#91A5BD,strength=3);
+}
+.tleft
+{
+	background-image: url('../image/tab1.gif');
+}
+.tright
+{
+	background-image: url('../image/tab3.gif');
+}
+.ttop
+{
+	background-image: url('../image/tab2.gif');
+	
+}
+.ttop_over
+{
+	background-image: url('../image/tab8.gif');
+}
+.tbottom
+{
+	background-image: url('../image/tab4.gif');
+}
+.tbottom2
+{
+	background-image: url('../image/tab6.gif');
+}
+.tbottom3
+{
+	background-image: url('../image/tab7.gif');
+	border-bottom: 1px #91A5BD solid;
+}
+.getfouce
+{
+	cursor: default;
+	text-indent: 6px;
+	font-size: 12px;
+	 
+	color:#000000;
+	FONT-FAMILY: "";
+	font-weight:bold;
+	background-color:#FAFBFE;
+}
+.lostfouce
+{
+	text-indent: 6px;
+	font-size: 12px;
+	background-image: url('../image/tab5.gif');
+	border-bottom: 1px #91A5BD solid;
+	cursor: hand;
+	color:#555555;
+	FONT-FAMILY: "";
+	padding-top:4px
+}
+.lostfouce_over
+{
+	text-indent: 6px;
+	font-size: 12px;
+	cursor: hand;
+	background-image: url('../image/tab9.gif');
+	border-bottom: 1px #91A5BD solid;
+	
+}
+.tab_1{
+	border-right: 1px solid #91A5BD;
+	border-left: 1px solid #91A5BD;
+	border-bottom: 1px solid #91A5BD;
+	padding: 0;
+}

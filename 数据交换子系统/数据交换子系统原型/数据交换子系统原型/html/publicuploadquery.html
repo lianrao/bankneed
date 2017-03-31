@@ -1,0 +1,186 @@
+
+
+
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<style type="text/css">
+<!--
+body {
+	background-color: #EAF2FB;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+}
+-->
+</style>
+<LINK href="common.css" type=text/css 
+rel=stylesheet>
+</HEAD>
+<BODY>
+<script language='javascript' src="js/popcalendar.js"></script>
+
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0 >
+  <TBODY>
+  
+  <TR><TD class="blue" height=40>
+      <DIV align=left>
+      	<IMG height=11 src="images/location_arrow.gif" width=8 align=absMiddle> 
+      	您的位置：公共信息交换&gt;&gt; <strong>公共信息查询
+        </strong></DIV>
+  </TD></TR>
+  
+  <TR><TD vAlign=top>
+     <form action="" method=POST name="form1" onSubmit="return submitonce(this);">
+     <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TR>
+        	<TD width=100>上传文件名</TD>
+        	<TD width=85%><input name="applyno" type="text" value=""/></TD>
+       </TR>
+        <TR>
+        	<TD width=100>上传用户名</TD>
+        	<TD><input name="username" type="text" value=""/></TD>
+       </TR>
+       <TR>
+        	<TD>数据属性</TD>
+        	<TD>   <select name="select">
+              <option value="1">常用软件</option>
+              <option value="2">文件通知</option>
+              <option value="3">操作手册</option>
+              <option value="4" selected>其他</option>
+            
+              
+            </select>       	</TD>
+       </TR>
+        <TR>
+        	<TD>上传日期</TD>
+        	<TD> 
+                 <input type=text name='startdate1' readonly="readonly"  size=10 maxlength=10  value=''/>
+	    
+             <script language='javascript'>            
+	            if (!document.layers) {
+	                 document.write("<input type=button onclick='popUpCalendar(this, form1.startdate1, \"yyyymmdd\")' value='选择' style='font-size:12px'/>")
+		    }            
+	            </script>
+	            -&gt;<input type=text name='enddate1' readonly="readonly"  size=10 maxlength=10  value=''/>
+              <script language='javascript'>            
+	            if (!document.layers) {
+	                 document.write("<input type=button onclick='popUpCalendar(this, form1.enddate1, \"yyyymmdd\")' value='选择' style='font-size:12px'/>")
+		    }            
+	            </script>        	</TD>
+       </TR>
+       <BR>
+       <TR>
+         <TD></TD>
+         <TD align=left>
+           <INPUT class=input-button type=submit value="查 询" name=Submit2> 
+          <INPUT class=input-button onClick="javascript:resetValue();" type=button value="重 填" name=Submit23>       
+         	    </TD>
+       </TR>
+     </TABLE>
+     
+     <TABLE cellspacing="0" cellpadding="0" width="95%" border="0" align="center">
+        <tr>
+          <td width="80%"><input type="hidden"  name="disableflag" value=""/>
+            <input type="hidden" name="selectedidlist" value="">
+            <div align="right"> 查到5项&nbsp;    
+              第1/1页&nbsp;&nbsp;
+              
+              <a href="">首页</a>&nbsp; <a href="">上一页</a>&nbsp;&nbsp;
+             
+              
+              <a href="">下一页</a>&nbsp; <a href="">尾页</a>&nbsp;&nbsp;
+              
+              到
+              <input type="text" size="5"/><input  type="button" value="go"/>
+              
+              页 </div></td>
+        </tr>
+     </table>
+     <table width="100%" border=0 cellpadding="5" cellspacing="0">
+     <tr>
+   
+     	<td width="24%" height="22" background="images/bg.gif">序号</td>
+     	<td width="26%" background="images/bg.gif">文件名</td>
+     	<td width="14%" background="images/bg.gif">上传机构</td>
+     	<td width="12%" background="images/bg.gif">数据属性</td>
+     </tr>
+    
+     <tr onMouseOver="abc(this)"  onMouseOut="def(this)" style="cursor:hand" >
+    
+        <td ><a href="javascript:detail()">PUBLIC20090315005</a></td>
+     	<td><a href="javascript:detail()">0000000000000020090315XX001.TXT</a></td>
+     	<td ><a href="javascript:detail()">征信中心</a></td>
+     	<td><a href="javascript:detail()">常用软件</a></td>
+     </tr>
+      <tr bgcolor="#FFFFFF"  onMouseOver="abc(this)"  onMouseOut="def(this)" style="cursor:hand"  >
+       
+        <td ><a href="javascript:detail()">PUBLIC20090315004</a></td>
+     	<td><a href="javascript:detail()">0000000000000020090315XX002.TXT</a></td>
+     	<td ><a href="javascript:detail()">征信中心</a></td>
+     	<td><a href="javascript:detail()">常用软件</a></td>
+     </tr>
+      <tr onMouseOver="abc(this)"  onMouseOut="def(this)" style="cursor:hand"  >
+       
+        <td ><a href="javascript:detail()">PUBLIC20090315003</a></td>
+     	<td><a href="javascript:detail()">0000000000000020090315XX001.TXT</a></td>
+     	<td ><a href="javascript:detail()">征信中心</a></td>
+     	<td><a href="javascript:detail()">文件通知</a></td>
+     </tr>
+      <tr  bgcolor="#FFFFFF"  onMouseOver="abc(this)"  onMouseOut="def(this)" style="cursor:hand"  >
+      
+        <td><a href="javascript:detail()">PUBLIC20090315002</a></td>
+     	<td><a href="javascript:detail()">0000000000000020090315XX001.TXT</a></td>
+     	  <td><a href="javascript:detail()">征信中心</a></td>
+     	<td><a href="javascript:detail()">操作手册</a></td>
+     </tr>
+      <tr onMouseOver="abc(this)"  onMouseOut="def(this)" style="cursor:hand"  >
+       
+        <td><a href="javascript:detail()">PUBLIC20090314003</a></td>
+     	<td><a href="javascript:detail()">0000000000000020090315XX001.TXT</a></td>
+     	<td><a href="javascript:detail()">征信中心</a></td>
+     	<td><a href="javascript:detail()">其他</a></td>
+     </tr>
+</TABLE>
+</FORM>
+
+<script language="JavaScript" >
+	function submitonce(){
+		return true;
+	}
+	function resetValue() {
+	  	document.form1.applyno.value='';
+	  	document.form1.username.value='';
+	  	document.form1.certtype.value='all';
+	  	document.form1.certno.value='';
+	  	document.form1.send.value=2;
+	}
+	function isNull(str){
+            if(str == ""){
+                return true;
+            }
+            var i;
+            for (i=0;i<str.length;i++){
+                if (str.charAt(i)!=' ') return false;
+            }
+            return true;
+	}
+</script>
+</BODY>
+</HTML>
+ <script>
+ function abc(a)
+ {   a.style.backgroundColor="#ffff99";
+    
+    
+ }
+ 
+ function def(b)
+ {
+ b.style.backgroundColor="";
+ }
+ function detail()
+ {
+    window.location.href="publicuploaddetail.html";
+ }
+ </script>

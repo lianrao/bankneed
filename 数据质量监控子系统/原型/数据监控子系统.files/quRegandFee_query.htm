@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://10.1.4.76:7015/creditunion/DissentRemindAction.do -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK"><LINK 
+href="common.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	MARGIN: 10px; BACKGROUND-COLOR: #eaf2fb
+}
+.style1 {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+</STYLE>
+<script language='javascript' src="js/popcalendar.js"></script>
+<script language="javascript" >
+function confirm()
+{
+    alert("导出...");
+}
+</script>
+<META content="MSHTML 6.00.2900.3527" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=confirmCorpSearchForm action=/webroot/confirmCardCorpAction.do 
+method=post>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD height=25>
+      <DIV align=left></DIV></TD></TR>
+<TR>
+          <TD class=blue><IMG height=11 
+            src="images/location_arrow.gif" width=8 
+            align=absMiddle> 您的位置：问题查询&gt;&gt; <strong>问题查询 </TD></TR>
+<TR>
+  <TR>
+    <TD vAlign=top><FORM onsubmit="javascript:return checkQueryIntput();" 
+      action="./queryOneCardAction.do" method="post" name="form1">
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TBODY>
+
+            <TD class=bac_y width=2 background=demo.files/pic_l03.gif></TD>
+            <TD width=100%><div align="center"><br>
+            </div></TD>
+            <TD class=bac_y width=10 background=demo.files/pic_l03.gif></TD>
+          </TR>
+<tr></tr>
+<TR>
+            <TD class=bac_y width=2 background=demo.files/pic_l03.gif></TD>
+            <TD width=100%><div align="center"><br>
+                    <table width="96%" class=text cellSpacing=0 borderColorDark=#ffffff cellPadding=3 borderColorLight=#6c88ae border=1>
+                       <tr>
+                        <td align=center colspan="2"><div align="left">问题登记时间:
+                          <input type="text" name="date1" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button2" type="button" onClick="popUpCalendar(this, date1, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+                          -
+                          <input type="text" name="date2" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button22" type="button" onClick="popUpCalendar(this, date2, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td align=center colspan="2"><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;问题处理状态:
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                       <tr>
+                        <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;机构大类:
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                        <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;机构小类:
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td><div align="left">机构所在省:
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                        <td><div align="left">机构所在市:
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td align=center colspan="2"><input name="Submit"  type="button" class="outline" style="height:24px"  onclick="" onMouseOver=msover(); onMouseOut=msout(); value="确  定"></td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                            <table width="98%" cellspacing="0">
+                        <tr>
+                          <td>
+                              <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF" >
+                                <tr>
+                          <td>
+                              <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF"  >
+                                <tr>
+                                  <td>过滤出的机构:
+			          </td>
+                                </tr>
+                                <tr>
+                                  <td>
+				     <select name="org" size = "10" multiple style="width:320px">
+					    <option value="B100000010">中国工商银行
+					    <option value="B100000011">中国建设银行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+					    <option value="B100000012">辽宁分支行
+                                     </select>
+			          </td>
+                                </tr>
+                            </table>
+                            </td>
+                            <td>
+                              <table width="100%" border="0" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF"  >
+                                <tr>
+                                  <td align=center>
+				     <input name="button" type=reset class="outline" style="height:24px" onMouseOver=msover(); onMouseOut=msout(); value=" >> ">
+			          </td>
+                                </tr>
+                                <tr>
+                                  <td align=center>
+				     <input name="button" type=reset class="outline" style="height:24px" onMouseOver=msover(); onMouseOut=msout(); value=" << ">
+			          </td>
+                                </tr>
+                            </table>
+                            </td>
+                            <td>
+                              <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF"  >
+                                <tr>
+                                  <td>已选中的机构:
+			          </td>
+                                </tr>
+                                <tr>
+                                  <td>
+				     <select name="org" size = "10" multiple style="width:320px">
+					    <option value="B100000010">中国工商银行
+					    <option value="B100000011">中国建设银行
+                                     </select>
+			          </td>
+                                </tr>
+                            </table>
+                            </td>
+                        </tr>
+                            </table></td>
+                        </tr>
+                      </table>
+                        </td>
+                      </tr>
+                    </table>
+              <br>
+              <span class="tablebody1">
+              <input name="Submit"  type="button" class="outline" style="height:24px"  onClick="document.getElementsByName('Layer1')[0].style.display='block';" onMouseOver=msover(); onMouseOut=msout(); value="查  询">
+              </span><span class="tablebody1">
+              <input name="button" type=reset class="outline" style="height:24px" onMouseOver=msover(); onMouseOut=msout(); value="重  置">
+              </span><br>
+                    <br>
+                    <br>
+
+<div id="Layer1" style="display:none;">
+<table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF" >
+<tr><td>
+<br/>       
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                   
+                                <td height="30"><div align="right" class="t12 t12 STYLE4"><span class="STYLE8">查到&nbsp;|&nbsp;第1/5页&nbsp;|&nbsp;<a href="#">首页</a>&nbsp;<a href="#">上一页</a>&nbsp;<a href="#">下一页</a>&nbsp;<a href="#">尾页</a>&nbsp;|&nbsp;到第
+                                  <label>
+                                          <select name="select">
+                                          </select>
+                                    </label>
+                                  页</span></div></td>
+                              </tr>
+                            </table>          
+                       <table width="100%" border="1" cellpadding="0" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF" >
+                                <tr>
+                                  <TD align="center" bgcolor="#EAF2FB" width=20%><span class="STYLE6"><b>标题</b></span></TD>
+                                  <TD align="center" bgcolor="#EAF2FB" width=20%><span class="STYLE6"><b>登记初始时间</b></span></TD>
+                                  <TD align="center" bgcolor="#EAF2FB" width=20%><span class="STYLE6"><b>当前状态</b></span></TD>
+                                  <TD align="center" bgcolor="#EAF2FB" width=20%><span class="STYLE6"><b>最近一次状态更改时间间</b></span></TD>
+                                   <TD align="center" bgcolor="#EAF2FB" width=20%><span class="STYLE6"><b>发送机构名称</b></span></TD>
+                                </tr>
+                                <tr>
+                                  <TD align="center"><div align="center"><a href='quRegandFee_query_detail.htm'>报文版式错误</a></div></TD> 
+                                  <TD align="center">2009-04-27</TD>
+                                  <TD align="center">已回复</TD>
+                                  <TD align="center">2009-04-27 14:06</TD>
+<TD align="center">中国工商银行</TD>
+                                </tr>
+                                <tr>
+                                  <TD align="center"><div align="center"><a href='quRegandFee_query_detail.htm'>报文常见错误</a></div></TD> 
+                                  <TD align="center">2009-04-27</TD>
+                                  <TD align="center">未回复</TD> 
+                                  <TD align="center">2009-04-27 14:06</TD></label>  
+<TD align="center">征信中心</TD></label>                       
+  				</tr>
+<tr>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+<TD align="center">&nbsp;</TD>
+                                </tr>
+				<tr>
+				  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+<TD align="center">&nbsp;</TD>
+                                </tr>
+				<tr>
+				  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+                                  <TD align="center">&nbsp;</TD>
+<TD align="center">&nbsp;</TD>
+                                </tr>
+</table>
+                      <br />
+</td></tr>
+<tr><td align=center><input name="Submit"  type="button" class="outline" style="height:24px"  onClick="confirm();" onMouseOver=msover(); onMouseOut=msout(); value="导  出"></td></tr>
+</table>
+</div>
+
+
+            </div></TD>
+            <TD class=bac_y width=10 background=demo.files/pic_l03.gif></TD>
+          </TR>
+          
+          <TD></TD></TR>
+
+
+</TBODY></TABLE></FORM></TD></TR></TBODY></TABLE></BODY></HTML>

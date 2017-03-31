@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://10.1.4.76:7015/creditunion/DissentRemindAction.do -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK"><LINK 
+href="common.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	MARGIN: 10px; BACKGROUND-COLOR: #eaf2fb
+}
+.style1 {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+</STYLE>
+<script language="javascript" >
+function update(stat)
+{
+    if (stat == 1)
+    {
+        alert("不能对此状态的问题进行更新");
+    }
+}
+function del(stat)
+{
+    if (stat == 1)
+    {
+        alert("不能对此状态的问题进行删除");
+    }
+    else
+    {
+       confirm("确定要删除此问题信息?");
+    }
+}
+</script>
+<META content="MSHTML 6.00.2900.3527" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=confirmCorpSearchForm action=/webroot/confirmCardCorpAction.do 
+method=post>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD height=25>
+      <DIV align=left></DIV></TD></TR>
+  <TR>
+    <TD vAlign=top><FORM onsubmit="javascript:return checkQueryIntput();" 
+      action="./queryOneCardAction.do" method="post" name="form1">
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TBODY>
+<TR>
+          <TD class=blue><IMG height=11 
+            src="images/location_arrow.gif" width=8 
+            align=absMiddle> 您的位置：问题统计&gt;&gt; <strong>按区域统计 </TD></TR>
+
+<tr>
+                          <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr> 
+                                <td height="30"><div align="right" class="t12 t12 STYLE4"><span class="STYLE8">查到&nbsp;|&nbsp;第1/5页&nbsp;|&nbsp;<a href="#">首页</a>&nbsp;<a href="#">上一页</a>&nbsp;<a href="#">下一页</a>&nbsp;<a href="#">尾页</a>&nbsp;|&nbsp;到第
+                                  <label>
+                                          <select name="select">
+                                          </select>
+                                    </label>
+                                  页</span></div></td>
+                              </tr>
+                            </table>
+                              <table width="100%" border="1" cellpadding="3" cellspacing="0" bordercolor="#5C96D5" bgcolor="#FFFFFF" >
+                                <tr>
+                                  <TH align="center" colspan="5"><span class="STYLE6">按区域统计</span></TH>
+                                </tr>
+                                <tr>
+                                  <TH align="center" bgcolor="#EAF2FB"><span class="STYLE6"></span></TH>
+                                  <TH align="center" bgcolor="#EAF2FB"><span class="STYLE6">问题总数</span></TH>
+                                  <TH align="center" bgcolor="#EAF2FB"><span class="STYLE6">未回复数</span></TH>
+                                  <TH align="center" bgcolor="#EAF2FB"><span class="STYLE6">已回复数</span></TH>
+                                  <TH align="center" bgcolor="#EAF2FB"><span class="STYLE6">已解决数</span></TH>
+                                </tr>
+                                <tr>
+                                  <TD align="center">北京</div></TD> 
+                                  <TD align="center">23</TD>
+                                  <TD align="center">11</div></TD>
+				  <TD align="center">7</div></TD>
+				  <TD align="center">5</div></TD>
+                                </tr>
+                                <tr>
+                                  <TD align="center">辽宁</div></TD> 
+                                  <TD align="center">26</TD>
+                                  <TD align="center">10</div></TD>
+				  <TD align="center">0</div></TD>
+				  <TD align="center">16</div></TD>                        
+  				</tr>
+                                <tr>
+                                  <TD align="center"><b>总计</b></div></TD> 
+                                  <TD align="center">49</TD>  
+                                  <TD align="center">21</TD>
+                                  <TD align="center">7</div></TD>
+				  <TD align="center">21</div></TD>                       
+  				</tr>
+                            </table></td>
+                        </tr>
+          <TD></TD></TR></TBODY></TABLE></FORM></TD></TR></TBODY></TABLE></BODY></HTML>

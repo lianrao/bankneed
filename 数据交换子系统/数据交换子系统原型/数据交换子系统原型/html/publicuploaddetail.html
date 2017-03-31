@@ -1,0 +1,124 @@
+
+
+
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<STYLE type=text/css>BODY {
+	MARGIN-TOP: 0px; BACKGROUND-IMAGE: url(images/seach_4.gif); MARGIN-LEFT: 0px
+}
+</STYLE>
+<LINK href="common.css" type=text/css 
+rel=stylesheet></HEAD>
+<BODY>
+
+  <form name="form1" method="post">
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+   <TR><TD class="blue" height=30>
+      <DIV align=left>
+      	<IMG height=11 src="images/location_arrow.gif" width=8 align=absMiddle> 
+      	您的位置：公共信息交换&gt;&gt;<strong>公共信息查询</strong></DIV>
+  </TD></TR>
+   <TR>
+          <TD colspan="2" class="white"  background="images/bg.gif" height="22">已上传文件信息</TD>
+  </TR>
+
+  <TR><TD vAlign=top>     
+     <TABLE cellSpacing=1 cellPadding=0 width="100%" bgcolor="#81b3c8">
+        <TR bgcolor="#EAF2FB">
+        	<TD width=100 noWrap>序号</TD>
+        	<TD width=80%>PUBLIC20090315005</TD>
+       </TR>
+        <TR bgcolor="#EAF2FB">
+        	<TD width=100>文件名</TD>
+        	<TD width=80%>0000000000000020090315XX001.txt</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>文件大小(m)</TD>
+        	<TD>500</TD>
+       </TR>
+      <TR bgcolor="#EAF2FB">
+        	<TD>文件生成时间</TD>
+        	<TD>20090315</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>上传时间</TD>
+        	<TD>20090316</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>文件路径</TD>
+        	<TD>/data/exchange/upload/常用软件/public/00000000000000/PUBLIC20090315XX001.txt</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>上传用户名</TD>
+        	<TD>adminuser</TD>
+       </TR>
+        
+       <TR bgcolor="#EAF2FB">
+        	<TD>数据属性
+            
+            
+            </TD>
+        	<TD><div id="sx1" style="display:" >常用软件
+             <input type="button" value="修改"  onClick="update()"></div>
+             <div id="sx2" style="display:none">
+            
+            <select name="certtype">
+        	         <option value="1">常用软件</option>
+              <option value="2">文件通知</option>
+              <option value="3">操作手册</option>
+              <option value="4" selected>其他</option>
+             	</select>  <input type="button" value="保存" onClick="save()">
+            </div>
+            </TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>备份状态</TD>
+        	<TD>未备份</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD>备份时间</TD>
+        	<TD>&nbsp;</TD>
+       </TR>
+       <TR bgcolor="#EAF2FB">
+        	<TD width=100>下载次数</TD>
+        	<TD width=80%>50</TD>
+       </TR>
+     
+       </TR>
+       </TABLE>
+       </td>
+	   </tr>
+       
+      
+         
+       
+       </table>
+       
+       <TABLE width="100%">
+       <TR><TD align=center>
+        <INPUT class=input-button onClick="" type=button value="删除" name=Submit2> 
+          
+          <INPUT class=input-button onClick="javascript:window.close();" type=button value="关闭" name=Submit2> 
+          
+       </TD></TR>
+     </TABLE>
+     </form>
+     </TD></TR>
+</TABLE>
+</FORM>
+
+</BODY>
+</HTML>
+<script>
+function update()
+{
+     document.getElementById("sx1").style.display="none";
+   document.getElementById("sx2").style.display="";
+}
+function save()
+{
+     document.getElementById("sx2").style.display="none";
+   document.getElementById("sx1").style.display="";
+}
+</script>

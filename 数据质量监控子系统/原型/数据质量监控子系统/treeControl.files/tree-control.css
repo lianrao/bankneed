@@ -1,0 +1,9 @@
+.tree-control {
+	FONT-SIZE: 80%; LINE-HEIGHT: 1; FONT-FAMILY: arial, verdana, geneva, helvetica, sans-serif
+}
+.tree-control-selected {
+	FONT-WEIGHT: bold; COLOR: black; TEXT-DECORATION: none
+}
+.tree-control-unselected {
+	FONT-WEIGHT: normal; COLOR: black; FONT-STYLE: normal; TEXT-DECORATION: none
+}

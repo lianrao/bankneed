@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://10.1.4.76:7015/creditunion/DissentRemindAction.do -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK"><LINK 
+href="common.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	MARGIN: 10px; BACKGROUND-COLOR: #eaf2fb
+}
+.style1 {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+</STYLE>
+<script language="javascript" >
+function update(stat)
+{
+    if (stat == 1)
+    {
+        alert("不能对此状态的问题进行更新");
+    }
+}
+function del(stat)
+{
+    if (stat == 1)
+    {
+        alert("不能对此状态的问题进行删除");
+    }
+}
+</script>
+<META content="MSHTML 6.00.2900.3527" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=confirmCorpSearchForm action=/webroot/confirmCardCorpAction.do 
+method=post>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD height=25>
+      <DIV align=left></DIV></TD></TR>
+  <TR>
+    <TD vAlign=top><FORM onsubmit="javascript:return checkQueryIntput();" 
+      action="./queryOneCardAction.do" method="post" name="form1">
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TBODY>
+
+<TR>
+            <TD class=bac_y width=2 background=demo.files/pic_l03.gif></TD>
+            <TD width=637><div align="center"> <br>
+                    <table width="96%" class=text cellSpacing=0 borderColorDark=#ffffff 
+                  cellPadding=3 borderColorLight=#6c88ae border=1>
+                      <tr>
+                        <td height="30" colspan="2">*填写全部项目</td>
+                      </tr>
+                      <tr>
+                        <td width="121" height="30"><div align="right">报文文件名称</div></td>
+                        <td width="312"><div align="left">
+                          <input type="text" name="named">
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">报送方式</div></td>
+                        <td><div align="left">
+                          <select name="select3" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">数据类型</div></td>
+                        <td><div align="left">
+                          <select name="select" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">报文处理状态</div></td>
+                        <td><div align="left">
+                          <select name="select2" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">调度状态</div></td>
+                        <td><div align="left">
+                          <select name="select4" style="width:133px">
+                          </select>
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">报文生成日期</div></td>
+                        <td><div align="left">
+                          <input type="text" name="date1" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button2" type="button" onClick="popUpCalendar(this, date1, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+                          -
+                          <input type="text" name="date2" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button22" type="button" onClick="popUpCalendar(this, date2, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">数据接收时间</div></td>
+                        <td><div align="left">
+                          <input type="text" name="date3" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button23" type="button" onClick="popUpCalendar(this, date3, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+-
+<input type="text" name="date4" readonly="readonly" size="10" class="textarea_simple"/>
+<input name="button222" type="button" onClick="popUpCalendar(this, date4, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+</div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">报文加载时间</div></td>
+                        <td><div align="left">
+                          <input type="text" name="date5" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button24" type="button" onClick="popUpCalendar(this, date5, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+-
+<input type="text" name="date6" readonly="readonly" size="10" class="textarea_simple"/>
+<input name="button223" type="button" onClick="popUpCalendar(this, date6, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+</div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">上报用户代码</div></td>
+                        <td><div align="left">
+                          <input type="text" name="named3">
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">报文内部编号</div></td>
+                        <td><div align="left">
+                          <input type="text" name="named4">
+                        </div></td>
+                      </tr>
+                      <tr>
+                        <td height="30"><div align="right">数据格式版本号</div></td>
+                        <td><div align="left">
+                          <input type="text" name="named5">
+                        </div></td>
+                      </tr>
+                    </table>
+              <br>
+              <span class="tablebody1">
+              <input name="button"  type="button" class=button1 style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid; WIDTH: 70px; COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal; HEIGHT: 24px; FONT-VARIANT: normal"  onclick="location.href='reportregisterinfo_result.htm';" onMouseOver=msover(); onMouseOut=msout(); value="提  交">
+              </span><span class="tablebody1">
+              <input name="button" type=reset class=button1 style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid; WIDTH: 70px; COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal; HEIGHT: 24px; FONT-VARIANT: normal" onMouseOver=msover(); onMouseOut=msout(); value="重  置">
+              </span><br>
+                    <br>
+            </div></TD>
+            <TD class=bac_y width=10 background=demo.files/pic_l03.gif></TD>
+          </TR>
+          <TD></TD></TR></TBODY></TABLE></FORM></TD></TR></TBODY></TABLE></BODY></HTML>

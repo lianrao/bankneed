@@ -1,0 +1,192 @@
+
+
+
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<link rel="stylesheet" href="css/tab.css"  type="text/css" />
+<STYLE type=text/css>
+body {
+background-color: #EAF2FB;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom:10px;
+}
+
+.style1 {
+	FONT-WEIGHT: bold; COLOR: #ffffff
+}
+.style2 {
+	FONT-SIZE: 13px; COLOR: #000000
+}
+
+</STYLE>
+<LINK href="common.css" type=text/css 
+rel=stylesheet>
+</HEAD>
+<!--************************************* 实例代码开始 *************************************--><style type="text/css"> 
+.multipleSelectBoxControl span{ /* Labels above select boxes*/  font-family:arial;  font-size:11px;  font-weight:bold; } .multipleSelectBoxControl div select{ /* Select box layout */  font-family:arial;  height:100%; } .multipleSelectBoxControl input{ /* Small butons */  width:25px;  }  .multipleSelectBoxControl div{  float:left; }   .multipleSelectBoxDiv {}   fieldset{  width:500px;  margin:10px; } .style9 {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+</style> <script type="text/javascript">  /************************************************************************************************************ (C) www.dhtmlgoodies.com, October 2005  This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.   Terms of use: You are free to use this script as long as the copyright message is kept intact. However, you may not redistribute, sell or repost it without our permission.  Thank you!  www.dhtmlgoodies.com Alf Magne Kalleland  ************************************************************************************************************/    var fromBoxArray = new Array(); var toBoxArray = new Array(); var selectBoxIndex = 0;  function moveSingleElement() {  var selectBoxIndex = this.parentNode.parentNode.id.replace(/[^\d]/g,'');  var tmpFromBox;  var tmpToBox;  if(this.tagName.toLowerCase()=='select'){      tmpFromBox = this;   if(tmpFromBox==fromBoxArray[selectBoxIndex])tmpToBox = toBoxArray[selectBoxIndex]; else tmpToBox = fromBoxArray[selectBoxIndex];  }else{     if(this.value.indexOf('>')>=0){    tmpFromBox = fromBoxArray[selectBoxIndex];    tmpToBox = toBoxArray[selectBoxIndex];      }else{    tmpFromBox = toBoxArray[selectBoxIndex];    tmpToBox = fromBoxArray[selectBoxIndex];    }  }    for(var no=0;no<tmpFromBox.options.length;no++){   if(tmpFromBox.options[no].selected){    tmpFromBox.options[no].selected = false;    tmpToBox.options[tmpToBox.options.length] = new Option(tmpFromBox.options[no].text,tmpFromBox.options[no].value);        for(var no2=no;no2<(tmpFromBox.options.length-1);no2++){     tmpFromBox.options[no2].value = tmpFromBox.options[no2+1].value;     tmpFromBox.options[no2].text = tmpFromBox.options[no2+1].text;     tmpFromBox.options[no2].selected = tmpFromBox.options[no2+1].selected;    }    no = no -1;    tmpFromBox.options.length = tmpFromBox.options.length-1;              }     }      var tmpTextArray = new Array();  for(var no=0;no<tmpFromBox.options.length;no++){   tmpTextArray.push(tmpFromBox.options[no].text + '___' + tmpFromBox.options[no].value);     }  tmpTextArray.sort();  var tmpTextArray2 = new Array();  for(var no=0;no<tmpToBox.options.length;no++){   tmpTextArray2.push(tmpToBox.options[no].text + '___' + tmpToBox.options[no].value);     }    tmpTextArray2.sort();    for(var no=0;no<tmpTextArray.length;no++){   var items = tmpTextArray[no].split('___');   tmpFromBox.options[no] = new Option(items[0],items[1]);     }      for(var no=0;no<tmpTextArray2.length;no++){   var items = tmpTextArray2[no].split('___');   tmpToBox.options[no] = new Option(items[0],items[1]);     } }  function moveAllElements() {  var selectBoxIndex = this.parentNode.parentNode.id.replace(/[^\d]/g,'');  var tmpFromBox;  var tmpToBox;    if(this.value.indexOf('>')>=0){   tmpFromBox = fromBoxArray[selectBoxIndex];   tmpToBox = toBoxArray[selectBoxIndex];     }else{   tmpFromBox = toBoxArray[selectBoxIndex];   tmpToBox = fromBoxArray[selectBoxIndex];   }    for(var no=0;no<tmpFromBox.options.length;no++){   tmpToBox.options[tmpToBox.options.length] = new Option(tmpFromBox.options[no].text,tmpFromBox.options[no].value);     }     tmpFromBox.options.length=0;   }    function createMovableOptions(fromBox,toBox,totalWidth,totalHeight,labelLeft,labelRight) {    fromObj = document.getElementById(fromBox);  toObj = document.getElementById(toBox);      fromObj.ondblclick = moveSingleElement;  toObj.ondblclick = moveSingleElement;    fromBoxArray.push(fromObj);  toBoxArray.push(toObj);    var parentEl = fromObj.parentNode;    var parentDiv = document.createElement('DIV');  parentDiv.className='multipleSelectBoxControl';  parentDiv.id = 'selectBoxGroup' + selectBoxIndex;  parentDiv.style.width = totalWidth + 'px';  parentDiv.style.height = totalHeight + 'px';  parentEl.insertBefore(parentDiv,fromObj);      var subDiv = document.createElement('DIV');  subDiv.style.width = (Math.floor(totalWidth/2) - 15) + 'px';  fromObj.style.width = (Math.floor(totalWidth/2) - 15) + 'px';  var label = document.createElement('SPAN');  label.innerHTML = labelLeft;  subDiv.appendChild(label);    subDiv.appendChild(fromObj);  subDiv.className = 'multipleSelectBoxDiv';  parentDiv.appendChild(subDiv);      var buttonDiv = document.createElement('DIV');  buttonDiv.style.verticalAlign = 'middle';  buttonDiv.style.paddingTop = (totalHeight/2) - 50 + 'px';  buttonDiv.style.width = '30px';  buttonDiv.style.textAlign = 'center';  parentDiv.appendChild(buttonDiv);    var buttonRight = document.createElement('INPUT');  buttonRight.type='button';  buttonRight.value = '>';  buttonDiv.appendChild(buttonRight);   buttonRight.onclick = moveSingleElement;     var buttonAllRight = document.createElement('INPUT');  buttonAllRight.type='button';  buttonAllRight.value = '>>';  buttonAllRight.onclick = moveAllElements;  buttonDiv.appendChild(buttonAllRight);      var buttonLeft = document.createElement('INPUT');  buttonLeft.style.marginTop='10px';  buttonLeft.type='button';  buttonLeft.value = '<';  buttonLeft.onclick = moveSingleElement;  buttonDiv.appendChild(buttonLeft);      var buttonAllLeft = document.createElement('INPUT');  buttonAllLeft.type='button';  buttonAllLeft.value = '<<';  buttonAllLeft.onclick = moveAllElements;  buttonDiv.appendChild(buttonAllLeft);    var subDiv = document.createElement('DIV');  subDiv.style.width = (Math.floor(totalWidth/2) - 15) + 'px';  toObj.style.width = (Math.floor(totalWidth/2) - 15) + 'px';  var label = document.createElement('SPAN');  label.innerHTML = labelRight;  subDiv.appendChild(label);      subDiv.appendChild(toObj);  parentDiv.appendChild(subDiv);      toObj.style.height = (totalHeight - label.offsetHeight) + 'px';  fromObj.style.height = (totalHeight - label.offsetHeight) + 'px';     selectBoxIndex++;   }  function selectItem() {  var obj = document.getElementById('toBox[]');  for(var no=0;no<obj.options.length;no++){   obj.options[no].selected = true;  } }  
+
+
+</script>
+<script src="js/tabclass.js"></script>
+<script type="text/javascript">
+   var correcttabbox=new TabBox("tab");
+   correcttabbox.addtab("p1","筛选查找",0);
+   correcttabbox.addtab("p2","模糊查找");
+
+   
+</script>
+<BODY>
+<table height="100%" cellspacing=0 cellpadding=0 width="100%" border=0 >
+  <tbody>
+    <tr>
+      <td class="blue" height=40></td>
+    </tr>
+    <tr>
+      <td valign=top> <form method="post" action="" onSubmit="selectItem()" name="form1">
+<table    height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0 >
+  <!--DWLayoutTable-->
+  <tr>
+    <td height="284" valign="top"><table border="0" width="100%"  >
+      
+      <tr>
+        <td height="17" colspan="3" bgcolor="#99CC33"  class="white"><span class="style9">选择目标机构</span></td>
+      </tr>
+      <tr>
+       <td colspan="3"  align="center">
+       
+       <span id=Top1_lblwelcome>
+<script language="javascript">
+   var NC6=(navigator.userAgent.indexOf("Netscape6")>0)?true:false;
+   var IE=(document.all)?true:false;
+   if(IE)
+   {
+      document.write("<"+"script language=\"javascript\" src=\"menu2.js\"><\/script>");
+   }
+   else if(NC6)
+   {
+      document.write("<"+"script language=\"javascript\" src=\"NCmenu.js\"><\/script>");
+   }
+</script>
+</span>
+<script>
+  correcttabbox.init()
+</script>
+   <div id="p1" class="tab_1" style="height: 80px;  display:block" >	
+   
+
+            <table width="100%"   border="0" bordercolor="#CC6600" bordercolorlight="#FFFFFF">
+            
+              <tr>
+              <td width="103"></td>
+                <td width="117">机构类型：</td>
+                <td width="89" height="24"><label>机构大类：</label></td>
+                <td width="111"><select name="select2">
+                    <option value="0">人民银行</option>
+                    <option value="1">商业银行</option>
+                </select></td>
+                <td width="89" >机构小类： </td>
+                <td width="426"><select name="select3">
+                    <option>全国性商业银行</option>
+                </select></td>
+              </tr>
+              <tr>
+              <td></td>
+                <td>机构所在地：</td>
+                <td >所在省：</td>
+                <td><label>
+                  <select name="select4">
+                    <option value="1">河北省</option>
+                    <option value="2">北京市</option>
+                    <option value="3">山东省</option>
+                    <option value="4">天津市</option>
+                    <option value="5">山西省</option>
+                  </select>
+                </label></td>
+                <td >所在市：</td>
+                <td><select name="select5">
+                    <option>北京市</option>
+                    <option>天津市</option>
+                    <option>太原市</option>
+                    <option>石家庄市</option>
+                </select></td>
+              </tr>
+              <tr>   
+                <td colspan="6" align="center"><input name="查找" value="查找" type="button" onClick="show()" />&nbsp;
+                  <input name="重置" value="重置" type="reset"  /></td>
+              </tr>
+            </table>
+   </div>
+      <div id="p2" class="tab_1" style="height: 80px; display:block" >	
+           <table  border="0" width="100%" bordercolor="#CC6600" bordercolorlight="#FFFFFF">
+                <tr>
+                <td width="103"></td>
+                  <td width="183" >请输入查找的机构名称：</td>
+                  <td width="379" ><input type="text" name="textfield"  size="40"/>
+                    <input name="查找2"  value="查找" type="button" onClick="show()"/></td>
+                  <td width="289" height="24"><label></label>          </td>
+                </tr>
+              </table>
+      </div>       </td>
+       </tr>
+      
+      
+      
+     <tr>
+      <td width="20%"></td>
+     <td width="40%">
+     <div id="lb"  style="display" >
+         
+         
+        
+         <select multiple name="fromBox" id="fromBox"> <option value="3">中国银行股份有限公司</option>
+<option value="4">交通银行股份有限公司</option> <option value="6">中国光大银行股份有限公司</option> <option value="1">北京市商业银行</option> <option value="5">中国人民银行总行</option>  <option value="2">人民银行天津分行</option></select><select multiple name="toBox[]" id="toBox"> </select>
+         
+     </div>        </td>
+     <td width="40%"> <input type="button" value="确定并返回" onClick="javascript:window.close()"/></td>
+     <td>&nbsp;</td>
+     </tr>
+    </table>
+     
+        
+      </form>
+      
+      </td>
+      <td>
+    </tr>
+</table>
+
+</BODY>
+</HTML>
+<script>
+function change(a)
+{
+    if(a==1) 
+	{document.getElementById("sx").style.display="";
+	document.getElementById("mh").style.display="none";
+	}else
+	{
+	document.getElementById("sx").style.display="none";
+	document.getElementById("mh").style.display="";
+	
+	}
+	
+}
+function show()
+{
+    document.getElementById("lb").style.display="";
+
+}
+</script>
+<script type="text/javascript">createMovableOptions("fromBox","toBox",500,300,'可选机构','已选中的机构');</script>
+
+		      
+<script>
+   correcttabbox.inithidetab()
+</script>   

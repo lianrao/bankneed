@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://10.1.4.76:7015/creditunion/DissentRemindAction.do -->
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=GBK"><LINK 
+href="common.css" type=text/css rel=stylesheet>
+<STYLE type=text/css>BODY {
+	MARGIN: 10px; BACKGROUND-COLOR: #eaf2fb
+}
+.style1 {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+</STYLE>
+<script language='javascript' src="js/popcalendar.js"></script>
+<script language="javascript" >
+function confirm()
+{
+    alert("导出...");
+}
+</script>
+<META content="MSHTML 6.00.2900.3527" name=GENERATOR></HEAD>
+<BODY>
+<FORM name=confirmCorpSearchForm action=/webroot/confirmCardCorpAction.do 
+method=post>
+<TABLE height="100%" cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD height=25>
+      <DIV align=left></DIV></TD></TR>
+<TR>
+          <TD class=blue><IMG height=11 
+            src="images/location_arrow.gif" width=8 
+            align=absMiddle> 您的位置：问题统计&gt;&gt; <strong>问题统计 </TD></TR>
+<TR>
+  <TR>
+    <TD vAlign=top><FORM onsubmit="javascript:return checkQueryIntput();" 
+      action="./queryOneCardAction.do" method="post" name="form1">
+      <TABLE cellSpacing=0 cellPadding=5 width="100%" border=0>
+        <TBODY>
+
+            <TD class=bac_y width=2 background=demo.files/pic_l03.gif></TD>
+            <TD width=100%><div align="center"><br>
+            </div></TD>
+            <TD class=bac_y width=10 background=demo.files/pic_l03.gif></TD>
+          </TR>
+<tr></tr>
+<TR>
+            <TD class=bac_y width=2 background=demo.files/pic_l03.gif></TD>
+            <TD width=100%><div align="center"><br>
+                    <table width="96%" class=text cellSpacing=0 borderColorDark=#ffffff cellPadding=3 borderColorLight=#6c88ae border=1>
+                       <tr>
+                        <td align=center>问题登记时间:
+                          <input type="text" name="date1" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button2" type="button" onClick="popUpCalendar(this, date1, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+                          -
+                          <input type="text" name="date2" readonly="readonly" size="10" class="textarea_simple"/>
+                          <input name="button22" type="button" onClick="popUpCalendar(this, date2, 'yyyy-mm-dd')" value="选择" style="BORDER-RIGHT: #cc9966 1px solid; BORDER-TOP: #cc9966 1px solid; FONT-WEIGHT: normal;  BACKGROUND: #fff6dc; BORDER-LEFT: #cc9966 1px solid;  COLOR: #000000; LINE-HEIGHT: normal; BORDER-BOTTOM: #cc9966 1px solid; FONT-STYLE: normal;  FONT-VARIANT: normal">
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input name="Submit"  type="button" class="outline" style="height:24px"  onclick="location.href='quRegandFee_stat_time.htm';" onMouseOver=msover(); onMouseOut=msout(); value="按登记时间统计">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align=center colspan="2"><input name="Submit"  type="button" class="outline" style="height:24px"  onclick="location.href='quRegandFee_stat_area.htm';" onMouseOver=msover(); onMouseOut=msout(); value="按发送机构所在地统计"></td>
+                      </tr>
+                       <tr>
+                        <td align=center colspan="2"><input name="Submit"  type="button" class="outline" style="height:24px"  onclick="location.href='quRegandFee_stat_financeorg.htm';" onMouseOver=msover(); onMouseOut=msout(); value="按发送机构统计"></td>
+                      </tr>
+                    </table>
+              <br>
+                    <br>
+                    <br>
+
+
+            </div></TD>
+            <TD class=bac_y width=10 background=demo.files/pic_l03.gif></TD>
+          </TR>
+          
+          <TD></TD></TR>
+
+
+</TBODY></TABLE></FORM></TD></TR></TBODY></TABLE></BODY></HTML>
